@@ -1,10 +1,7 @@
 def calculate_fuel(ls: list, n: int):
     fuel = 0
     for l in ls:
-        if l > n:
-            fuel += sum(range(l-n+1))
-        else:
-            fuel += sum(range(n-l+1))
+        fuel += sum(range(abs(l-n)+1))
     return fuel
 
 file = open("input")
