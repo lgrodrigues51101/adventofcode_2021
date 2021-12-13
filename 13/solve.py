@@ -60,8 +60,9 @@ for line in file:
     line = line.strip()
     if line == "":
         break
-    x = int(line.split(",")[0])
-    y = int(line.split(",")[1])
+    # x = int(line.split(",")[0])
+    # y = int(line.split(",")[1])
+    x,y = map(int, line.split(","))
 
     if x > max_x:
         max_x = x
